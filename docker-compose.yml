@@ -1,4 +1,4 @@
-version: "3.4"
+version: '3.4'
 
 services:
   ms-template-microservice:
@@ -31,7 +31,7 @@ services:
       - 6379
     volumes:
       - local_redis_data:/data
-      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
     environment:
       - REDIS_REPLICATION_MODE=master
 
